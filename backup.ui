@@ -60,7 +60,7 @@
        <item>
         <widget class="QLineEdit" name="server">
          <property name="text">
-          <string>server.resoft.org</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -74,7 +74,7 @@
        <item>
         <widget class="QLineEdit" name="username">
          <property name="text">
-          <string>admin</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -88,7 +88,7 @@
        <item>
         <widget class="QLineEdit" name="password">
          <property name="text">
-          <string>onuragtas100</string>
+          <string/>
          </property>
         </widget>
        </item>
