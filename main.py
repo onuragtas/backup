@@ -11,8 +11,8 @@ class MainDialog(QtWidgets.QDialog, Ui_backup.Ui_Form, db.DB):
         super(MainDialog, self).__init__(parent)
         self.setupUi(self)
         self.DB()
-        self.remotepath = "/backup"
-        self.localpath = "/home/onuragtas/Workspace/backup/backup"
+        self.remotepath = ""
+        self.localpath = ""
         self.ssh = paramiko.SSHClient()
         self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         self.connectButton.clicked.connect(self.connect)
@@ -65,6 +65,7 @@ class MainDialog(QtWidgets.QDialog, Ui_backup.Ui_Form, db.DB):
                     self.log.setText(item+" disconnected")
             else:
                 self.log.setText(item+" already downloaded.")
+        self.stopf()
 
     def backupF(self):
         thread.start_new_thread(self.back,())
