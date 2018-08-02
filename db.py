@@ -1,7 +1,9 @@
 import sqlite3
+import os
 class DB():
     def DB(self):
-        self.conn = sqlite3.connect('backup.db')
+        path =  os.path.dirname(os.path.abspath(__file__))
+        self.conn = sqlite3.connect(path+'/backup.db')
         self.c = self.conn.cursor()
         self.c.execute('''CREATE TABLE IF NOT EXISTS servers (id INTEGER PRIMARY KEY AUTOINCREMENT, server text, username text, password text)''')
         self.conn.commit()
